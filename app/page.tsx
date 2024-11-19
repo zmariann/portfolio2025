@@ -20,7 +20,10 @@ export default function Home() {
             </code>
             .
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li className="text-xl font-bold">
+            SAVE and see your changes instantly.
+          </li>
+          <p className="text-9xl">Title</p>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
