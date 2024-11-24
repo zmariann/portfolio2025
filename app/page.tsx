@@ -6,19 +6,16 @@ export default function Home() {
       href={"/portfolio"}
       className="flex items-center justify-center min-h-screen pb-40 pt-5 relative"
     >
-      <div>
-        <section className="">
-          <h1 className="regonia text-9xl">Portfolio</h1>
-          <p className="text-xl">
-            Multimedia projects created by Mariann Zászlós
-          </p>
-        </section>
+      <section className="sm:p-0 p-5">
+        <h1 className="regonia sm:text-9xl text-5xl">Portfolio</h1>
+        <p className="text-xl">
+          Multimedia projects created by Mariann Zászlós
+        </p>
+      </section>
 
-        
-      </div>
-
-      <p className="text-xl absolute bottom-0 left-0 p-20">Click anywhere to continue</p>
-
+      <p className="sm:text-xl absolute bottom-0 sm:left-0 sm:p-20 pb-10 text-lg">
+        Click anywhere to continue
+      </p>
     </Link>
   );
 }
