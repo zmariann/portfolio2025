@@ -18,10 +18,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--neueRegrade-font);
-  font-weight: 600;
+  font-weight: 500;
 }
 
-p {
+.regonia {
   font-family: var(--regonia-font);
   font-weight: 400;
 }
