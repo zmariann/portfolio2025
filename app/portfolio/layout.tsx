@@ -1,3 +1,7 @@
+import { neueRegrade, regonia } from "../_components/fonts/font";
+import Footer from "../_components/footer";
+import NavLinks from "../_components/nav-links";
+
 export default function PortfolioLayout({
   children,
 }: {
@@ -5,9 +9,14 @@ export default function PortfolioLayout({
 }) {
   return (
     <html lang="en">
-      <body className="m-3">
-        {children}
-        THIS IS FROM LAYOUT
+      <body
+        className={`${neueRegrade.variable} ${regonia.variable} antialiased`}
+      >
+        <section className="min-h-screen flex flex-col">
+          <NavLinks></NavLinks>
+          <main className="">{children}</main>
+          <Footer></Footer>
+        </section>
       </body>
     </html>
   );

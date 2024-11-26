@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-      <div className="m-10">
+      <div className="">
           THIS MY PORTFOLIO
       </div>
     );

@@ -7,7 +7,7 @@ export default function Home() {
       className="flex items-center justify-center min-h-screen pb-40 pt-5 relative"
     >
       <section className="sm:p-0 p-5">
-        <h1 className="regonia sm:text-9xl text-5xl">Portfolio</h1>
+        <h1 className="sm:text-9xl text-5xl font-[family-name:var(--regonia-font)]">Portfolio</h1>
         <p className="text-xl hidden sm:block">
           Multimedia projects created by Mariann Zászlós
         </p>

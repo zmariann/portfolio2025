@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { neueRegrade, regonia } from "./fonts/font";
+import { neueRegrade, regonia } from "./_components/fonts/font";
 import "./globals.css";
 
 export const metadata: Metadata = {
