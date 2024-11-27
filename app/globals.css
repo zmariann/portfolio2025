@@ -4,19 +4,18 @@
 
 :root {
   --background: #f0f0f0;
-  --foreground: #323232;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --text-color: #323232;
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-color);
   background: var(--background);
   font-family: var(--neueRegrade-font);
   font-weight: 500;
+}
+
+.stroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #323232;
+  color: #f0f0f0;
 }

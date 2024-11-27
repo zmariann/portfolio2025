@@ -15,9 +15,10 @@ export default function NavLinks() {
 
   return (
     <header className="flex justify-between gap-6 m-10">
-      <Link className="" href="/portfolio">
+      <Link className="py-1" href="/portfolio">
         <p>Mariann Zászlós</p>
       </Link>
+
       <nav className="flex gap-6">
         {links.map((link) => {
           return (

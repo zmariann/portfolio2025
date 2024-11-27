@@ -12,11 +12,11 @@ export default function PortfolioLayout({
       <body
         className={`${neueRegrade.variable} ${regonia.variable} antialiased`}
       >
-        <section className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col">
           <NavLinks></NavLinks>
-          <main className="">{children}</main>
+          <section className="">{children}</section>
           <Footer></Footer>
-        </section>
+        </div>
       </body>
     </html>
   );
