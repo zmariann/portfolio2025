@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="mt-auto flex justify-between gap-6 mx-10 mb-5">
       <div className="py-6">
-        <div className="flex text-xl gap-6">
+        <div className="flex text-xl gap-6 tracking-wider">
           {links.map((link) => {
             return (
               <Link key={link.name} href={link.href}>
