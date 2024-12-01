@@ -14,8 +14,14 @@ body {
   font-weight: 500;
 }
 
-.stroke {
+.strokeDesktop {
   -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #323232;
+  color: #f0f0f0;
+}
+
+.strokeMobile {
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #323232;
   color: #f0f0f0;
 }
