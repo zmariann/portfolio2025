@@ -28,8 +28,8 @@ export default function Footer() {
         </p>
       </footer>
 
-      <footer className="mt-auto flex justify-between gap-6 mx-10 mb-5 sm:hidden">
-        <p className="text-6xl font-[family-name:var(--regonia-font)]">
+      <footer className="mt-auto flex justify-center mx-10 mb-5 sm:hidden">
+        <p className="text-5xl font-[family-name:var(--regonia-font)]">
           Portfolio
         </p>
       </footer>
