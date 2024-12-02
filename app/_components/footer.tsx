@@ -23,7 +23,7 @@ export default function Footer() {
             })}
           </div>
         </div>
-        <p className="text-6xl font-[family-name:var(--regonia-font)] mt-2">
+        <p className="text-[10vh] font-[family-name:var(--regonia-font)] mt-2">
           Portfolio
         </p>
       </footer>
