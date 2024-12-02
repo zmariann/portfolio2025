@@ -25,3 +25,7 @@ body {
   -webkit-text-stroke-color: #323232;
   color: #f0f0f0;
 }
+
+body:has(.requires-no-scroll) {
+  overflow: hidden;
+}

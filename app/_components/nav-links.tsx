@@ -1,27 +1,31 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
 
-const links = [
+const linksDesktop = [
   { name: "ABOUT", href: "/portfolio/about" },
   { name: "PROJECTS", href: "/portfolio/projects" },
   { name: "CONTACT", href: "/portfolio/contact" },
 ];
 
+const homeMobile = { name: "HOME", href: "/portfolio" };
+const linksMobile = [homeMobile].concat(linksDesktop);
+
 export default function NavLinks() {
+  const pathname = usePathname();
+  const btnRef = useRef(null);
   const [showMenu, setMenu] = useState(false);
 
-  useEffect(() => {
-    const closeDropdown = (): void => {
-      setMenu(false);
-    };
-    document.body.addEventListener("click", closeDropdown);
-    return () => document.body.removeEventListener("click", closeDropdown);
-  }, []);
-  const pathname = usePathname();
+  function toggleMenu() {
+    setMenu((prev) => !prev);
+  }
+
+  const handleLinkClick = () => {
+    setMenu(false);
+  };
 
   return (
     <>
@@ -31,7 +35,7 @@ export default function NavLinks() {
         </Link>
 
         <nav className="flex gap-6 tracking-wider">
-          {links.map((link) => {
+          {linksDesktop.map((link) => {
             return (
               <Link
                 key={link.name}
@@ -48,22 +52,24 @@ export default function NavLinks() {
       </header>
 
       <header className="flex justify-center m-7 sm:hidden">
-        <button
-          className="text-xl tracking-wider"
-          onClick={() => setMenu(!showMenu)}
-        >
-          MENU
+        <button ref={btnRef} onClick={toggleMenu} className="">
+          {showMenu ? (
+            <p className="text-xl font-black tracking-wider">X</p>
+          ) : (
+            <p className="text-xl tracking-wider">MENU</p>
+          )}
         </button>
 
         {showMenu && (
-          <nav className="h-[70vh] w-[90%] m-10 flex flex-col justify-center items-center gap-6 fixed bg-light-shade border-dark-shade border-[3px]">
-            {links.map((link) => {
+          <nav className="min-h-[70vh] min-w-[90%] m-10 flex flex-col justify-center items-center fixed bg-light-shade border-dark-shade border-[3px] requires-no-scroll">
+            {linksMobile.map((link) => {
               return (
                 <Link
                   key={link.name}
                   href={link.href}
+                  onClick={handleLinkClick}
                   className={clsx(
-                    "text-4xl font-black tracking-wider strokeDesktop",
+                    "text-[13vw] font-black tracking-wider strokeDesktop",
                     {
                       hidden: pathname === link.href,
                     }
