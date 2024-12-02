@@ -61,7 +61,7 @@ export default function NavLinks() {
         </button>
 
         {showMenu && (
-          <nav className="min-h-[68vh] min-w-[90%] m-10 flex flex-col justify-center items-center fixed bg-light-shade border-dark-shade border-[3px] requires-no-scroll">
+          <nav className="min-h-[68vh] min-w-[90%] m-10 flex flex-col justify-center items-center fixed bg-light-shade border-dark-shade border-[2px] requires-no-scroll">
             {linksMobile.map((link) => {
               return (
                 <Link
@@ -69,7 +69,7 @@ export default function NavLinks() {
                   href={link.href}
                   onClick={handleLinkClick}
                   className={clsx(
-                    "text-[11vw] font-black tracking-wider strokeDesktop",
+                    "text-[12vw] font-black tracking-wider strokeMobile",
                     {
                       hidden: pathname === link.href,
                     }
