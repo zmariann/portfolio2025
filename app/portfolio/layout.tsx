@@ -14,7 +14,7 @@ export default function PortfolioLayout({
       >
         <div className="min-h-screen flex flex-col">
           <NavLinks></NavLinks>
-          <section className="">{children}</section>
+          {children}
           <Footer></Footer>
         </div>
       </body>
