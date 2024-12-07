@@ -23,7 +23,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
     return () => clearTimeout(timeout);
   }, [index, text, speed, delay]);
 
-  return <h1 className="text-left">{displayedText}</h1>;
+  return <h1 className="text-left tracking-wider text-lg">{displayedText}</h1>;
 };
 
 export default Typewriter;
