@@ -25,7 +25,7 @@ export default function About() {
       </section>
 
       <section className="min-h-[60vh] mx-10 sm:hidden">
-        <div className="mb-2">
+        <div className="mb-6">
           <p className="tracking-wider text-xl mb-8">
             I help people bring their ideas to life with high-quality
             audiovisual solutions.
