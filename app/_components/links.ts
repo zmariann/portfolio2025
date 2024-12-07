@@ -1,5 +1,5 @@
 export const links = [
-  { name: "INSTAGRAM", href: "/portfolio/about" },
-  { name: "LINKEDIN", href: "/portfolio/projects" },
-  { name: "GITHUB", href: "/portfolio/contact" },
+  { name: "INSTAGRAM", href: "https://www.instagram.com/z_mariann/?hl=hu" },
+  { name: "LINKEDIN", href: "https://www.linkedin.com/in/zmariann" },
+  { name: "GITHUB", href: "https://github.com/zmariann" },
 ];
