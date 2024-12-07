@@ -16,7 +16,7 @@ export default function Popup(props: Popup) {
       >
         X
       </button>
-      <div>{props.children}</div>
+      {props.children}
     </div>
   ) : (
     ""

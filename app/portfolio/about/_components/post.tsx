@@ -21,7 +21,7 @@ export default function Posts(props: Posts) {
         Read more...
       </button>
       <Popup trigger={popup} setTrigger={setpopup}>
-        <div className="w-[100vw] h-[90vh] sm:w-[70vw] sm:h-[50vh] md:w-[80vw] md:h-[40vh] border-[1px] border-dark-shade pl-5 py-3 pr-2 overflow-y-scroll scrollbar-hide overflow-scroll">
+        <div className="w-[90vw] h-[80vh] sm:w-[70vw] sm:h-[50vh] md:w-[80vw] md:h-[40vh] border-[1px] border-dark-shade  pl-5 py-3 pr-2 overflow-y-scroll scrollbar-hide overflow-scroll">
           <Typewriter text={props.textContent} speed={20} />
         </div>
       </Popup>
