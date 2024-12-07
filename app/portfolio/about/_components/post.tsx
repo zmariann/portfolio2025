@@ -14,7 +14,7 @@ export default function Posts(props: Posts) {
 
   return (
     <div>
-      <button className="tracking-wider text-2xl underline uppercase" onClick={() => setpopup(true)}>
+      <button className="tracking-wider text-xl sm:text-2xl underline uppercase" onClick={() => setpopup(true)}>
       {props.title}
       </button>
       <Popup trigger={popup} setTrigger={setpopup}>
