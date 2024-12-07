@@ -1,3 +1,3 @@
 export default function Projects() {
-  return <p>Projects TEXT</p>;
+  return <p>Online content can take many forms...</p>;
 }
