@@ -1,5 +1,5 @@
 "use client";
-import IndexVideo from "@/app/_components/react-player";
+import IndexVideo from "@/app/_components/index-video";
 
 export default function Home() {
   return (
