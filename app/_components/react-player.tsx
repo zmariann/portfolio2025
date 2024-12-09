@@ -12,6 +12,7 @@ interface VideoPlayerProps {
   loop?: boolean;
   playing?: boolean;
   muted?: boolean;
+  controls?: boolean;
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
@@ -21,6 +22,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   loop,
   playing,
   muted,
+  controls,
 }) => {
   return (
     <ReactPlayer
@@ -30,6 +32,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       loop={loop}
       playing={playing}
       muted={muted}
+      controls={controls}
     />
   );
 };
