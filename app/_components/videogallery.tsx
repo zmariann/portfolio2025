@@ -3,11 +3,11 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import VideoPlayer from "./react-player";
 
-type GalleryProps = {
+type VideoGalleryProps = {
   content: string[];
 };
 
-const Gallery: React.FC<GalleryProps> = ({ content }) => {
+const VideoGallery: React.FC<VideoGalleryProps> = ({ content }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -109,4 +109,4 @@ const Gallery: React.FC<GalleryProps> = ({ content }) => {
   );
 };
 
-export default Gallery;
+export default VideoGallery;
