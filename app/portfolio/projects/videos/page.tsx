@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import Popup from "@/app/_components/popup";
-import VideoGallery from "@/app/_components/videogallery";
+import VideoGallery from "@/app/_components/video-gallery";
 import { tiktokUrls } from "./_components/tiktok-videos";
 import BackLink from "../../../_components/backLink";
-import SingleVideo from "@/app/_components/singleVideo";
+import SingleVideo from "@/app/_components/single-video";
 import { videosmenu } from "./_components/videos-menu";
 
 export default function Videos() {
