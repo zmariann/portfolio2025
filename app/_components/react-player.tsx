@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-export const ReactPlayer = dynamic(() => import("react-player"), {
+export const ReactPlayer = dynamic(() => import("react-player/lazy"), {
   ssr: false,
 });
 

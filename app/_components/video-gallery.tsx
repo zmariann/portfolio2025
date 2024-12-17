@@ -20,15 +20,14 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ content }) => {
     );
   };
 
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "ArrowRight") {
-      handleNext();
-    } else if (event.key === "ArrowLeft") {
-      handlePrevious();
-    }
-  };
-
   useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") {
+        handleNext();
+      } else if (event.key === "ArrowLeft") {
+        handlePrevious();
+      }
+    };
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);

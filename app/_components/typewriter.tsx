@@ -15,12 +15,13 @@ const Typewriter: React.FC<TypewriterProps> = ({
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    index < text.length;
-    const timeout = setTimeout(() => {
-      setDisplayedText((prev) => prev + text.charAt(index));
-      setIndex((prev) => prev + 1);
-    }, speed);
-    return () => clearTimeout(timeout);
+    if (index < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + text.charAt(index));
+        setIndex((prev) => prev + 1);
+      }, speed);
+      return () => clearTimeout(timeout);
+    }
   }, [index, text, speed, delay]);
 
   return <h1 className="text-left tracking-wider text-lg">{displayedText}</h1>;
