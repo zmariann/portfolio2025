@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import VideoPlayer from "./react-player";
 
 type VideoGalleryProps = {
@@ -10,15 +9,15 @@ type VideoGalleryProps = {
 const VideoGallery: React.FC<VideoGalleryProps> = ({ content }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % content.length);
-  };
+  }, [content.length]);
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + content.length) % content.length
     );
-  };
+  }, [content.length]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -28,12 +27,12 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ content }) => {
         handlePrevious();
       }
     };
+
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
-
+  }, [handleNext, handlePrevious]);
   return (
     <>
       <section className="w-full md:block hidden">
