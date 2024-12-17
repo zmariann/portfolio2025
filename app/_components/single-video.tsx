@@ -12,7 +12,7 @@ const SingleVideo: React.FC<VideoGalleryProps> = ({ content }) => {
     <VideoPlayer
       url={content}
       controls={true}
-      muted={true}
+      muted={false}
       playing={true}
       loop={true}
     />
