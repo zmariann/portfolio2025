@@ -33,55 +33,28 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ content }) => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleNext, handlePrevious]);
+
   return (
-    <>
-      <section className="w-full md:block hidden">
-        <div className="flex justify-center items-center h-[80vh] w-full">
-          <div className="w-full h-full flex justify-center items-center">
-            <button
-              className="text-xl font-black tracking-wider uppercase"
-              onClick={handlePrevious}
-              disabled={content.length <= 1}
-            >
-              p
-            </button>
-          </div>
-
-          <VideoPlayer
-            url={content[currentIndex]}
-            controls={true}
-            muted={true}
-            playing={true}
-            loop={true}
-          />
-
-          <div className="w-full h-full flex justify-center items-center">
-            <button
-              className="text-xl font-black tracking-wider uppercase"
-              onClick={handleNext}
-              disabled={content.length <= 1}
-            >
-              n
-            </button>
-          </div>
-        </div>
-        <div className="text-xs text-center m-3">
-          {currentIndex + 1} / {content.length}
-        </div>
-      </section>
-
-      <section className="w-full md:hidden flex justify-center items-center flex-col overflow-scroll">
-        <div className="flex justify-center items-center h-[80vh] w-full">
-          <VideoPlayer
-            url={content[currentIndex]}
-            controls={true}
-            muted={true}
-            playing={true}
-            loop={true}
-          />
+    <section className="w-full flex flex-col mt-2">
+      <div className="flex justify-center items-center h-[80vh] w-full flex-col md:flex-row">
+        <div className="hidden md:flex w-full h-full justify-center items-center">
+          <button
+            className="text-xl font-black tracking-wider uppercase"
+            onClick={handlePrevious}
+            disabled={content.length <= 1}
+          >
+            p
+          </button>
         </div>
 
-        <div className="flex w-[70vw] justify-between">
+        <VideoPlayer
+          url={content[currentIndex]}
+          controls={true}
+          playing={true}
+          loop={true}
+        />
+
+        <div className="md:hidden flex w-[70vw] justify-between">
           <button
             className="text-xl font-black tracking-wider uppercase"
             onClick={handlePrevious}
@@ -102,8 +75,22 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ content }) => {
             n
           </button>
         </div>
-      </section>
-    </>
+
+        <div className="hidden w-full h-full md:flex justify-center items-center">
+          <button
+            className="text-xl font-black tracking-wider uppercase"
+            onClick={handleNext}
+            disabled={content.length <= 1}
+          >
+            n
+          </button>
+        </div>
+      </div>
+
+      <div className="hidden md:block text-xs text-center m-3">
+        {currentIndex + 1} / {content.length}
+      </div>
+    </section>
   );
 };
 
