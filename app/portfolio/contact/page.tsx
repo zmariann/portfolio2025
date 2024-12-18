@@ -1,4 +1,4 @@
-import { links } from "@/app/_components/links";
+import { links } from "@/app/_components/links-out";
 
 export default function Contact() {
   return (

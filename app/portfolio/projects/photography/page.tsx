@@ -1,4 +1,4 @@
-import BackLink from "@/app/_components/backLink";
+import BackLink from "@/app/_components/back-link";
 
 export default function Photography() {
   return (

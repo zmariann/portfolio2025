@@ -11,7 +11,7 @@ export default function Projects() {
       <div>
         {projects.map((link) => {
           return (
-            <Link key={link.name} href={link.href}>
+            <Link key={link.name} href={link.href + ".html"}>
               <p> {link.name} </p>
             </Link>
           );

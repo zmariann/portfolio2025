@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <Link
-      href={"/portfolio"}
+      href={"/portfolio"+'.html'}
       className="flex items-center justify-center min-h-screen pb-40 pt-5 sm:relative flex-col"
     >
       <div>

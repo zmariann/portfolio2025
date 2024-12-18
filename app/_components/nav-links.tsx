@@ -30,7 +30,7 @@ export default function NavLinks() {
   return (
     <>
       <header className="sm:flex justify-between gap-6 m-10 hidden">
-        <Link className="py-1" href="/portfolio">
+        <Link className="py-1" href={"/portfolio" +'.html'}>
           <p className="tracking-wider">Mariann Zászlós</p>
         </Link>
 
@@ -39,7 +39,7 @@ export default function NavLinks() {
             return (
               <Link
                 key={link.name}
-                href={link.href}
+                href={link.href + '.html'}
                 className={clsx("text-xl", {
                   "font-black text-2xl": pathname === link.href,
                 })}
@@ -66,7 +66,7 @@ export default function NavLinks() {
               return (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  href={link.href +'.html'}
                   onClick={handleLinkClick}
                   className={clsx(
                     "text-[12vw] font-black tracking-wider strokeMobile",

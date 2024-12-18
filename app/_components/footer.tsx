@@ -1,6 +1,6 @@
 "use client";
 
-import { links } from "./links";
+import { links } from "./links-out";
 
 export default function Footer() {
   return (
