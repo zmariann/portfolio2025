@@ -10,7 +10,12 @@ export default function Footer() {
           <div className="flex text-xl gap-6 tracking-wider">
             {links.map((link) => {
               return (
-                <a key={link.name} href={link.href}>
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <p> {link.name} </p>
                 </a>
               );
