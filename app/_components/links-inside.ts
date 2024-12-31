@@ -19,9 +19,9 @@ export const linksProjects: Link[] = [
 
 export const linkPortfolio: Link[] = [{ name: "ABOUT", href: "/portfolio" }];
 
-/*
-// links for production:
 
+// links for production:
+/*
 const html: string = ".html";
 
 function appendHtmlToHrefInPlace(links: Link[]): void {
