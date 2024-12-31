@@ -4,15 +4,7 @@ import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
-
-const linksDesktop = [
-  { name: "ABOUT", href: "/portfolio/about" },
-  { name: "PROJECTS", href: "/portfolio/projects" },
-  { name: "CONTACT", href: "/portfolio/contact" },
-];
-
-const homeMobile = { name: "HOME", href: "/portfolio" };
-const linksMobile = [homeMobile].concat(linksDesktop);
+import { linksDesktop, linksMobile } from "./links-inside";
 
 export default function NavLinks() {
   const pathname = usePathname();
@@ -30,7 +22,7 @@ export default function NavLinks() {
   return (
     <>
       <header className="sm:flex justify-between gap-6 m-10 hidden">
-        <Link className="py-1" href={"/portfolio" +'.html'}>
+        <Link className="py-1" href={"/portfolio"}>
           <p className="tracking-wider">Mariann Zászlós</p>
         </Link>
 
@@ -39,7 +31,7 @@ export default function NavLinks() {
             return (
               <Link
                 key={link.name}
-                href={link.href + '.html'}
+                href={link.href}
                 className={clsx("text-xl", {
                   "font-black text-2xl": pathname === link.href,
                 })}
@@ -66,7 +58,7 @@ export default function NavLinks() {
               return (
                 <Link
                   key={link.name}
-                  href={link.href +'.html'}
+                  href={link.href}
                   onClick={handleLinkClick}
                   className={clsx(
                     "text-[12vw] font-black tracking-wider strokeMobile",

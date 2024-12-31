@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { linkPortfolio } from "./_components/links-inside";
 
 export default function Home() {
   return (
     <Link
-      href={"/portfolio"+'.html'}
+      href={linkPortfolio[0].href}
       className="flex items-center justify-center min-h-screen pb-40 pt-5 sm:relative flex-col"
     >
       <div>
