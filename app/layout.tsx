@@ -3,8 +3,13 @@ import { neueRegrade, regonia } from "./_components/fonts/font";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mariann Zászlós Portfolio 2025",
+  creator: "Mariann Zászlós",
+  title: {
+    template: "Mariann Zászlós Portfolio 2025 | %s",
+    default: "Mariann Zászlós Portfolio 2025",
+  },
   description: "Photography and video projects created by Mariann Zászlós",
+  keywords: ["Content Creator", "Social Media", "Video", "Photo", "Audiovisual", "Photographer", "Videographer"],
 };
 
 export default function RootLayout({

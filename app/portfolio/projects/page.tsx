@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { linksProjects } from "@/app/_components/links-inside";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Projects',
+};
 
 export default function Projects() {
   return (

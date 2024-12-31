@@ -5,6 +5,11 @@ import {
   post2Content,
 } from "./_components/all-posts";
 import Posts from "./_components/post";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 export default function About() {
   return (

@@ -1,4 +1,9 @@
 import { links } from "@/app/_components/links-out";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 export default function Contact() {
   return (
