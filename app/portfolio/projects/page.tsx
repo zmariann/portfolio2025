@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <section className="flex justify-center items-center min-h-[60vh] flex-col sm:text-7xl text-[15vw] gap-4 font-[family-name:var(--regonia-font)]">
+    <section className="flex justify-center items-center min-h-[60vh] flex-col sm:text-7xl text-[15vw] font-[family-name:var(--regonia-font)] leading-none">
       <div>
         {linksProjects.map((link) => {
           return (

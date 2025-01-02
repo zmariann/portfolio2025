@@ -9,5 +9,5 @@ export default function BackLink() {
     router.back();
   };
 
-  return <button className="underline uppercase text-sm" onClick={handleBack}>Back</button>;
+  return <button className="underline uppercase text-sm font-[family-name:var(--neueRegrade-font)]" onClick={handleBack}>Back</button>;
 }
