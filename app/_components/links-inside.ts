@@ -19,6 +19,12 @@ export const linksProjects: Link[] = [
 
 export const linkPortfolio: Link[] = [{ name: "ABOUT", href: "/portfolio" }];
 
+export const linksPhoto: Link[] = [
+  { name: "Rosa", href: "/portfolio/projects/photography/rosa" },
+  { name: "Product", href: "/portfolio/projects/photography/product" },
+  { name: "Coralized", href: "/portfolio/projects/photography/coralized" },
+  { name: "Event", href: "/portfolio/projects/photography/event" },
+];
 
 // links for production:
 /*
@@ -33,6 +39,7 @@ function appendHtmlToHrefInPlace(links: Link[]): void {
 appendHtmlToHrefInPlace(linksDesktop);
 appendHtmlToHrefInPlace(linksProjects);
 appendHtmlToHrefInPlace(linkPortfolio);
+appendHtmlToHrefInPlace(linksPhoto);
 
 homeMobile.href += html;
 */
