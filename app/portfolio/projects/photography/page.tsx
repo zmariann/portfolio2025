@@ -1,37 +1,18 @@
 import BackLink from "@/app/_components/back-link";
+import Link from "next/link";
+import { linksPhoto } from "@/app/_components/links-inside";
 
 export default function Photography() {
   return (
-    <section className="w-full min-h-[60vh] flex justify-center items-center flex-col">
-      <div className="m-5">
-        <h1>| Under construction |</h1>
-        <p className="mb-6">
-          For more info get in touch: CONTACT@ZMARIANN.COM{" "}
-        </p>
-        <div className="mb-6">
-          <p className="mb-2">
-            Check my product photography portfolio{" "}
-            <a
-              href="/photography/product.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline uppercase"
-            >
-              here.
-            </a>
-          </p>
-          <p>
-            Check my event photography portfolio{" "}
-            <a
-              href="/photography/event.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline uppercase"
-            >
-              here.
-            </a>
-          </p>
-        </div>
+    <section className="w-full min-h-[60vh] flex justify-center items-center flex-col sm:text-7xl text-5xl font-[family-name:var(--regonia-font)] mb-5">
+      <div className="flex flex-col items-start">
+        {linksPhoto.map((link) => {
+          return (
+            <Link href={link.href} key={link.name}>
+              {link.name}
+            </Link>
+          );
+        })}
         <BackLink></BackLink>
       </div>
     </section>
