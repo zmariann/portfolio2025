@@ -3,7 +3,7 @@ import { linksProjects } from "@/app/_components/links-inside";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Projects',
+  title: "Projects",
 };
 
 export default function Projects() {
