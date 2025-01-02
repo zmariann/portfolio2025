@@ -43,7 +43,7 @@ export default function NavLinks() {
         </nav>
       </header>
 
-      <header className="flex justify-center m-7 sm:hidden">
+      <header className="flex justify-center m-7 sm:hidden top-0 left-0 z-50">
         <button ref={btnRef} onClick={toggleMenu} className="">
           {showMenu ? (
             <p className="text-xl font-black tracking-wider">X</p>
