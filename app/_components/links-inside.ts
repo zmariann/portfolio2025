@@ -21,8 +21,9 @@ export const linkPortfolio: Link[] = [{ name: "ABOUT", href: "/portfolio" }];
 
 export const linksPhoto: Link[] = [
   { name: "Rosa", href: "/portfolio/projects/photography/rosa" },
-  { name: "Product", href: "/portfolio/projects/photography/product" },
+  { name: "Products", href: "/portfolio/projects/photography/products" },
   { name: "Coralized", href: "/portfolio/projects/photography/coralized" },
+  { name: "Pigments", href: "/portfolio/projects/photography/pigments" },
   { name: "Event", href: "/portfolio/projects/photography/event" },
 ];
 

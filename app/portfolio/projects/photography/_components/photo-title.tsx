@@ -6,10 +6,14 @@ interface TitleProps {
 
 export default function Title({ name }: TitleProps) {
   return (
-    <h1 className="px-10 w-full">
-      <div className="flex justify-between">
-        <div className="text-7xl font-[family-name:var(--regonia-font)]">{name}</div>
-        <div className="pt-10"><BackLink></BackLink></div>
+    <h1 className="sm:px-10 pl-5 w-full">
+      <div className="flex sm:justify-between flex-col sm:flex-row">
+        <div className="sm:text-7xl text-4xl font-[family-name:var(--regonia-font)]">
+          {name}
+        </div>
+        <div className="sm:pt-10">
+          <BackLink></BackLink>
+        </div>
       </div>
     </h1>
   );
