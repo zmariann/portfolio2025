@@ -4,7 +4,7 @@ import { linksPhoto } from "@/app/_components/links-inside";
 
 export default function Photography() {
   return (
-    <section className="w-full min-h-[60vh] flex justify-center items-center flex-col sm:text-7xl text-5xl font-[family-name:var(--regonia-font)] mb-5">
+    <section className="w-full min-h-[60vh] flex justify-center items-center flex-col md:text-7xl text-5xl font-[family-name:var(--regonia-font)] mb-5">
       <div className="flex flex-col items-start">
         {linksPhoto.map((link) => {
           return (

@@ -63,13 +63,10 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((image, index) => (
-          <div
-            key={index}
-            className="overflow-hidden aspect-square relative"
-          >
+          <div key={index} className="overflow-hidden aspect-square relative">
             <img
               src={image.src}
               alt={image.alt}
@@ -95,7 +92,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 
           <div
             className="relative max-w-4xl w-full mx-4 flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+            onClick={(e) => e.stopPropagation()}
           >
             <img
               src={images[selectedImageIndex].src}
@@ -111,13 +108,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
           <div onClick={(e) => e.stopPropagation()}>
             <button
               onClick={prevImage}
-              className="absolute left-6 top-[90%] transform -translate-y-1/2 text-dark-shade text-xl font-black w-8 h-8 pr-[3px] pt-[1px] border-dark-shade border-[1px] bg-light-shade z-10"
+              className="absolute left-4 top-[90%] transform -translate-y-1/2 border-dark-shade text-xl font-black w-8 h-8 pr-[3px] pt-[3px] border-[1px] bg-light-shade z-10"
             >
               &#10094;
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-6 top-[90%] transform -translate-y-1/2 border-dark-shade border-[1px] bg-light-shade text-xl font-black w-8 h-8 pt-[1px] z-10"
+              className="absolute right-4 top-[90%] transform -translate-y-1/2 border-dark-shade text-xl font-black w-8 h-8 pl-[2px] pt-[3px] border-[1px] bg-light-shade z-10"
             >
               &#10095;
             </button>

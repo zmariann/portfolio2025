@@ -1,15 +1,15 @@
 import ImageGallery from "@/app/_components/img-gallery";
-import { imagesCoralized } from "./_components/images-coralized";
+import { imagesRosa } from "./_components/images-rosa";
 import Title from "../_components/photo-title";
 import NextProject from "../_components/next-project";
 
 export default function Coralized() {
   return (
     <>
-      <Title name="Coralized"></Title>
+      <Title name="Rosa"></Title>
       <section>
-        <ImageGallery images={imagesCoralized}></ImageGallery>
-        <NextProject projectPath="/portfolio/projects/photography/pigments"></NextProject>
+        <ImageGallery images={imagesRosa}></ImageGallery>
+        <NextProject projectPath="/portfolio/projects/photography/people"></NextProject>
       </section>
     </>
   );
