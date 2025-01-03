@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
-import { linksDesktop, linksMobile } from "./links-inside";
+import { linksDesktop, linksMobile, homeMobile } from "./links-inside";
 import { useEffect } from "react";
 
 export default function NavLinks() {
@@ -31,7 +31,7 @@ export default function NavLinks() {
   return (
     <>
       <header className="sm:flex justify-between gap-6 m-10 hidden">
-        <Link className="py-1" href={"/portfolio"}>
+        <Link className="py-1" href={homeMobile.href}>
           <p className="tracking-wider">Mariann Zászlós</p>
         </Link>
 

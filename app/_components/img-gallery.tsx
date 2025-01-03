@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 interface ImageProps {
   src: string;
@@ -24,23 +24,23 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
     setImageLoaded(false);
   };
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     if (selectedImageIndex !== null) {
       setSelectedImageIndex((prevIndex) => {
         const currentIndex = prevIndex ?? 0;
         return currentIndex === images.length - 1 ? 0 : currentIndex + 1;
       });
     }
-  };
+  }, [selectedImageIndex, images.length]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     if (selectedImageIndex !== null) {
       setSelectedImageIndex((prevIndex) => {
         const currentIndex = prevIndex ?? 0;
         return currentIndex === 0 ? images.length - 1 : currentIndex - 1;
       });
     }
-  };
+  }, [selectedImageIndex, images.length]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -56,7 +56,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [selectedImageIndex]);
+  }, [selectedImageIndex, nextImage, prevImage]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -85,7 +85,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-4 border-dark-shade border-[1px] bg-light-shade text-xl font-black w-8 h-8 pt-[1px] z-10"
+            className="absolute top-4 border-dark-shade border-[1px] bg-light-shade text-xl font-black w-8 h-8 pt-[1px] pr-[1px] z-10"
           >
             X
           </button>

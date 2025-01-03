@@ -29,7 +29,7 @@ export const linksPhoto: Link[] = [
 ];
 
 // links for production:
-/*
+
 const html: string = ".html";
 
 function appendHtmlToHrefInPlace(links: Link[]): void {
@@ -44,4 +44,4 @@ appendHtmlToHrefInPlace(linkPortfolio);
 appendHtmlToHrefInPlace(linksPhoto);
 
 homeMobile.href += html;
-*/
+
